@@ -1,30 +1,38 @@
 import React, { Component } from 'react'; //, { Component }
 import shortid from 'shortid';
 import Container from './Container/Container';
-//import Counter from './Counter/Counter';
-//import Dropdown from './Dropdown/Dropdown';
-// import ColorPicker from './ColorPicker/ColorPicker';
 import initialTodos from './TodoList/todos.json';
 import TodoEditor from './TodoEditor/TodoEditor';
 import Filter from './Filter/Filter';
 import TodoList from './TodoList/TodoList';
-
-// import Form from './Form/Form';
-
-// const colorPickerOptions = [
-//   { label: 'red', color: '#F44336' },
-//   { label: 'green', color: '#4CAF50' },
-//   { label: 'blue', color: '#2196F3' },
-//   { label: 'grey', color: '#607D8B' },
-//   { label: 'pink', color: '#E91E63' },
-//   { label: 'indigo', color: '#3F51B5' },
-// ];
+import { Header } from './Header/Header';
 
 class App extends Component {
   state = {
-    todos: initialTodos, // or todos, it shortheadproperty
+    todos: [], // or todos, it shortheadproperty // initialTodos
     filter: '',
   };
+
+  // LS: render > didMount > getItem > setState > update > render > didUpdate > setItem
+
+  componentDidMount() {
+    const savedTodos = localStorage.getItem('todos');
+    if (savedTodos !== null) {
+      this.setState({
+        todos: JSON.parse(savedTodos),
+      });
+    } else {
+      this.setState({
+        todos: initialTodos,
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.todos !== this.state.todos) {
+      localStorage.setItem('todos', JSON.stringify(this.state.todos));
+    }
+  }
 
   addTodo = text => {
     console.log(text);
@@ -100,6 +108,7 @@ class App extends Component {
 
     return (
       <Container>
+        <Header />
         <div>
           <p>Total todos: {totalTodosCount}</p>
           <p>Total done: {completedTodosCount}</p>
@@ -120,6 +129,11 @@ class App extends Component {
 }
 
 export default App;
+
+//import Counter from './Counter/Counter';
+//import Dropdown from './Dropdown/Dropdown';
+// import ColorPicker from './ColorPicker/ColorPicker';
+// import Form from './Form/Form';
 
 // Add to <Container> for watching
 

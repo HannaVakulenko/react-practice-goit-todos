@@ -1,6 +1,6 @@
 [
-  { "id": "id-1", "text": "Todo 1", "completed": true },
-  { "id": "id-2", "text": "Todo 2", "completed": false },
-  { "id": "id-3", "text": "Todo 3", "completed": true },
-  { "id": "id-4", "text": "Todo 4", "completed": false }
+  { "id": "id-1", "text": "Learn React", "completed": true },
+  { "id": "id-2", "text": "Understand React Router", "completed": false },
+  { "id": "id-3", "text": "Get used to redux", "completed": true },
+  { "id": "id-4", "text": "Try React Hooks", "completed": false }
 ]

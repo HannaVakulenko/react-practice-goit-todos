@@ -1,5 +1,12 @@
 .TodoList {
   width: 600px;
+  display: flex;
+  max-width: calc(100vw - 48px);
+  flex-direction: column;
+  row-gap: 8px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .TodoList__item {
@@ -8,10 +15,21 @@
   align-items: center;
   padding: 20px;
   border: 1px solid black;
+  border-radius: 4px;
 }
 
 .TodoList__text {
   margin-top: 5px;
   margin-bottom: 0;
   margin-right: 10px;
+}
+
+.TodoList__item--completed {
+  text-decoration: line-through;
+}
+
+.TodoList__checkbox {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }

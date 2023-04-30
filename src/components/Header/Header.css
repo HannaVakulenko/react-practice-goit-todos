@@ -1,0 +1,13 @@
+.HeaderStyled {
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background-color: #3f4c6b;
+  box-shadow: 8px 8px 8px -8px #000000, -4px 0px 8px 0px #000000;
+  margin-left: -16px;
+  margin-right: -16px;
+  line-height: 1.125;
+}
