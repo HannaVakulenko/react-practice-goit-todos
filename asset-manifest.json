@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-practice-goit-todos/static/css/main.57a6b2cf.css",
-    "main.js": "/react-practice-goit-todos/static/js/main.b142c2dc.js",
+    "main.css": "/react-practice-goit-todos/static/css/main.a5af630e.css",
+    "main.js": "/react-practice-goit-todos/static/js/main.5e43fb94.js",
     "index.html": "/react-practice-goit-todos/index.html",
-    "main.57a6b2cf.css.map": "/react-practice-goit-todos/static/css/main.57a6b2cf.css.map",
-    "main.b142c2dc.js.map": "/react-practice-goit-todos/static/js/main.b142c2dc.js.map"
+    "main.a5af630e.css.map": "/react-practice-goit-todos/static/css/main.a5af630e.css.map",
+    "main.5e43fb94.js.map": "/react-practice-goit-todos/static/js/main.5e43fb94.js.map"
   },
   "entrypoints": [
-    "static/css/main.57a6b2cf.css",
-    "static/js/main.b142c2dc.js"
+    "static/css/main.a5af630e.css",
+    "static/js/main.5e43fb94.js"
   ]
 }
